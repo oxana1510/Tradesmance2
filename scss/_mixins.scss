@@ -1,0 +1,70 @@
+@mixin flex{
+	display: -webkit-box;  
+	display: -ms-flexbox;
+	display: flex;
+}
+@mixin justify-content($jc){
+	-webkit-box-pack: $jc;
+	-ms-flex-pack: justify;
+	justify-content: $jc;
+}
+
+@mixin align-items($ai){
+	-webkit-box-align: $ai;
+	-ms-flex-align: $ai;
+	align-items: $ai;
+}
+
+@mixin flex-wrap($wrap: wrap){
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+
+@mixin transform($param) {
+	-webkit-transform: $param;
+	-ms-transform: $param;
+	transform: $param;
+}
+
+@mixin transition($transition...) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin button {
+	display: inline-block;
+	border-radius: 27px;
+	color: #fff;
+	font-family: $HB;
+	font-weight: 600;
+	width: 100%;
+	text-align: center;
+	&:hover{
+		color: #ff8a00;
+		svg{
+			fill: #ff8a00;
+		}
+	}
+}
+
+@mixin appearance($appearance: none){
+	-webkit-appearance: $appearance;
+    	-moz-appearance: $appearance;
+    		appearance: $appearance;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content} 
+}
+@mixin placeholder-focus {
+	:focus::-webkit-input-placeholder {@content}
+	:focus:-moz-placeholder           {@content}
+	:focus::-moz-placeholder          {@content}
+	:focus:-ms-input-placeholder      {@content} 
+}
